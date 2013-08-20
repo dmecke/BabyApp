@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Baby App</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/cordova.js"></script>
+    </head>
+    <body onload="onLoad()">
+        <div class="animal" id="donkey"></div>
+        <div class="animal" id="cow"></div>
+        <div class="animal" id="sheep"></div>
+        <div class="animal" id="horse"></div>
+        <div class="animal" id="hen"></div>
+        <div class="animal" id="rooster"></div>
+        <div class="animal" id="pig"></div>
+        <div class="animal" id="goat"></div>
+        <div class="animal" id="bunny"></div>
+        <script type="text/javascript">
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            function onDeviceReady() {
+                console.log('device is ready');
+                alert('foo');
+                playAudio('audio/goat.wav');
+            }
+
+            function playAudio(src) {
+                console.log('audio start');
+                console.log(src);
+                var media = new Media(src, onSuccess, onError);
+                console.log(media);
+                media.play();
+                console.log('audio end');
+            }
+
+            function onSuccess() {
+                console.log('success');
+            }
+
+            function onError(error) {
+                console.log('code: ' + error.code + ' | message: ' + error.message);
+            }
+
+            $('.animal').click(function() {
+                console.log('clicked');
+                playAudio('audio/' + $(this).attr('id') + '.wav');
+            });
+            $(document).ready(function() {
+                console.log('ready');
+            });
+        </script>
+    </body>
+</html>

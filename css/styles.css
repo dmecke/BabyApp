@@ -1,0 +1,54 @@
+body {
+    background: url(../images/background.jpg) no-repeat;
+}
+.animal {
+    position: absolute;
+}
+#donkey {
+    left: 46px;
+    top: 245px;
+    width: 94px;
+    height: 101px;
+}
+#cow {
+    left: 145px;
+    top: 186px;
+    width: 149px;
+    height: 103px;
+}
+#sheep {
+    left: 303px;
+    top: 191px;
+    width: 93px;
+    height: 83px;
+}
+#horse {
+    left: 411px;
+    top: 174px;
+    width: 147px;
+    height: 161px;
+}
+#hen {
+    left: 89px;
+    top: 339px;
+    width: 55px;
+    height: 70px;
+}
+#rooster {
+    left: 160px;
+    top: 354px;
+    width: 76px;
+    height: 87px;
+}
+#pig {
+    left: 207px;
+    top: 296px;
+    width: 135px;
+    height: 86px;
+}
+#goat {
+    left: 346px;
+    top: 275px;
+    width: 83px;
+    height: 113px;
+}

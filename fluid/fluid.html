@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="fluid.js"></script>
+        <meta charset=utf-8 />
+        <title>Fluid</title>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="fps"></div>
+        <script type="text/javascript">
+            var canvasSize = 1024;
+            var size = 64;
+            var interval = 10;
+            var depth = 1000;
+            var friction = 0.9;
+            var shipFriction = 0.9;
+            var acceleration = 0.01;
+            $(document).ready(function() {
+                init();
+                setInterval(function() { loop(); }, interval);
+                setInterval(function() { fps(); }, 1000);
+            });
+        </script>
+    </body>
+</html>
